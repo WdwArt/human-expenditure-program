@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCW42REGKX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LCW42REGKX');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamePortal - Play Free Online Games</title>
+    <meta name="description" content="Play the best free online games in your browser. No downloads required! Discover amazing games across all genres.">
+    <meta name="keywords" content="free online games, browser games, play online, game portal, no download">
+    <meta name="author" content="GamePortal">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="GamePortal - Play Free Online Games">
+    <meta property="og:description" content="Play the best free online games in your browser. No downloads required!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{CURRENT_URL}">
+    <meta property="og:image" content="{SITE_IMAGE_URL}">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GamePortal - Play Free Online Games">
+    <meta name="twitter:description" content="Play the best free online games in your browser.">
+    <meta name="twitter:image" content="{SITE_IMAGE_URL}">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#2c3e50">
+    <meta name="msapplication-TileColor" content="#2c3e50">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1233549253150625"
+     crossorigin="anonymous"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        
+        .logo i {
+            color: #2c3e50;
+            font-size: 2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: #2c3e50;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #2c3e50;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-links a.active {
+            color: #2c3e50;
+        }
+        
+        /* Main Content */
+        main {
+            margin-top: 80px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            margin: -1rem 0 2rem 0;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        /* Featured Game */
+        .featured-game {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            margin-top: 2rem;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .featured-game .game-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .featured-game .game-controls h3 {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .featured-game .control-buttons {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .featured-game .game-frame-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+        }
+        
+        .featured-game-frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Games Section */
+        .games-section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+            font-weight: 700;
+        }
+        
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .game-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .game-image {
+            height: 200px;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+        
+        .game-content {
+            padding: 2rem;
+        }
+        
+        .game-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        
+        .game-content p {
+            color: #6c757d;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .play-button {
+            background: #2c3e50;
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        
+        .play-button:hover {
+            background: #34495e;
+            transform: translateY(-2px);
+        }
+        
+        /* Videos Section */
+        .videos-section {
+            padding: 4rem 0;
+            background: white;
+        }
+        
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Game Description Section */
+        .game-description-section {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+        
+        .game-description-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .description-main h3 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .description-main h4 {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+        }
+        
+        .description-main p {
+            color: #6c757d;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .feature-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        
+        .feature-list li {
+            padding: 0.8rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            border-bottom: 1px solid #f1f3f4;
+        }
+        
+        .feature-list li::before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: #2c3e50;
+            font-size: 0.8rem;
+        }
+        
+        .feature-list li strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        .description-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .info-card, .themes-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .info-card h4, .themes-card h4 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            color: #6c757d;
+        }
+        
+        .theme-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+        
+        .theme-tag {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 3rem 0 1rem;
+            margin-top: 6rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #ecf0f1;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: #ecf0f1;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #34495e;
+            padding-top: 1rem;
+            margin-top: 2rem;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #2c3e50;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+        
+        .back-to-top:hover {
+            background: #34495e;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:active {
+            transform: translateY(-1px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding: 1rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 0.9rem;
+                margin: 0 auto 1rem;
+            }
+            
+            .featured-game .game-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .featured-game .control-buttons {
+                justify-content: center;
+            }
+            
+            .featured-game .game-controls h3 {
+                text-align: center;
+                margin-bottom: 0.5rem;
+            }
+            
+            .games-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .videos-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .game-description-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem;
+            }
+            
+            .theme-tags {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">
+                <i class="fas fa-gamepad"></i>
+                GamePortal
+            </a>
+            <ul class="nav-links">
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <h1>Play Free Online Games</h1>
+                <p>Discover amazing games across all genres. No downloads required, play directly in your browser!</p>
+                
+                <!-- Featured Game -->
+                <div class="featured-game">
+                    <div class="game-controls">
+                        <h3>🎮 Human Expenditure Program</h3>
+                        <div class="control-buttons">
+                            <button class="btn btn-primary" onclick="toggleFullscreen()">
+                                <span>⛶</span> Fullscreen
+                            </button>
+                        </div>
+                    </div>
+                    <div class="game-frame-container">
+                        <iframe 
+                            src="https://html-classic.itch.zone/html/14943229/index.html" 
+                            class="featured-game-frame"
+                            allowfullscreen
+                            allow="fullscreen *; geolocation; microphone; camera; midi; payment; vr"
+                            scrolling="no"
+                            id="featuredGameFrame">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Videos Section -->
+        <section class="videos-section" id="videos">
+            <div class="container">
+                <h2 class="section-title">Game Videos</h2>
+                <div class="videos-grid">
+                    <div class="video-container">
+                        <iframe 
+                            width="894" 
+                            height="503" 
+                            src="https://www.youtube.com/embed/8fAK-pB__rM" 
+                            title="Harvey is Back in Bloodmoney 2 || Human Expenditure Program (Full Game ALL ENDINGS)" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    
+                    <div class="video-container">
+                        <iframe 
+                            width="894" 
+                            height="503" 
+                            src="https://www.youtube.com/embed/FyUphg2A5dw" 
+                            title="BLOOD MONEY 2 IS HERE & HARVEY HAS A SECRET.. | Human Expenditure Program (ALL ENDINGS + SECRETS)" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    
+                    <div class="video-container">
+                        <iframe 
+                            width="894" 
+                            height="503" 
+                            src="https://www.youtube.com/embed/2nB21pBg2AI" 
+                            title="Blood Money Voice Actor Plays Human Expenditure Program 🎙️😱" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+  
+        <!-- Game Description Section -->
+        <section class="game-description-section" id="game-description">
+            <div class="container">
+                <h2 class="section-title">Human Expenditure Program</h2>
+                <div class="game-description-content">
+                    <div class="description-main">
+                        <h3>A Full Exploration of a Disturbing Interactive Experiment</h3>
+                        <p>
+                            Human Expenditure Program is an indie game that blends simulation, narrative, and moral choice into one unsettling package. Developed by ShroomyChrist Studios and sometimes referred to as BloodMoney 2, it puts the player in charge of Harvey Harvington, an ordinary man who becomes the subject of a mysterious "program."
+                        </p>
+                        
+                        <h4>Core Gameplay Mechanics</h4>
+                        <p>
+                            The game combines simple care mechanics with profound narrative consequences. Players interact with Harvey through feeding, talking, and various minigames, but every action carries weight due to Harvey's advanced memory system that tracks all previous interactions.
+                        </p>
+                        
+                        <h4>Key Features</h4>
+                        <ul class="feature-list">
+                            <li><strong>Interactive Care System</strong> - Manage Harvey's basic needs including feeding and resting</li>
+                            <li><strong>Memory Tracking</strong> - Harvey remembers all actions, creating long-term accountability</li>
+                            <li><strong>Branching Endings</strong> - Multiple possible conclusions based on player choices</li>
+                            <li><strong>Professional Voice Acting</strong> - Harvey voiced by Dexter Manning for authentic reactions</li>
+                            <li><strong>Moral Consequences</strong> - Every decision impacts the story's direction and Harvey's well-being</li>
+                            <li><strong>Atmospheric Tension</strong> - Psychological horror emerges from player choices rather than traditional scares</li>
+                        </ul>
+                        
+                        <h4>Themes and Impact</h4>
+                        <p>
+                            Beyond its surface mechanics, the game explores profound themes of exploitation, surveillance, and human responsibility. What begins as a simple simulation evolves into a disturbing commentary on how systems can reduce human life to expendable resources.
+                        </p>
+                        
+                        <h4>Why It Stands Out</h4>
+                        <p>
+                            Unlike traditional pet simulators or narrative games, Human Expenditure Program creates unique discomfort by making players confront their role in Harvey's fate. The horror comes not from external threats, but from the realization that you are participating in the systematic reduction of a human life to manageable mechanics.
+                        </p>
+                    </div>
+                    
+                    <div class="description-sidebar">
+                        <div class="info-card">
+                            <h4>Quick Facts</h4>
+                            <div class="info-item">
+                                <span class="info-label">Developer:</span>
+                                <span>ShroomyChrist Studios</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Also Known As:</span>
+                                <span>BloodMoney 2</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Genre:</span>
+                                <span>Simulation, Narrative</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Voice Actor:</span>
+                                <span>Dexter Manning</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Play Time:</span>
+                                <span>30-60 minutes</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Endings:</span>
+                                <span>Multiple (2+ main endings)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="themes-card">
+                            <h4>Core Themes</h4>
+                            <div class="theme-tags">
+                                <span class="theme-tag">Human Exploitation</span>
+                                <span class="theme-tag">Moral Choice</span>
+                                <span class="theme-tag">Systemic Control</span>
+                                <span class="theme-tag">Psychological Horror</span>
+                                <span class="theme-tag">Memory & Trauma</span>
+                                <span class="theme-tag">Responsibility</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GamePortal</h3>
+                    <p>Your destination for the best free online games. Play directly in your browser with no downloads required.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GamePortal. All rights reserved. All games are property of their respective owners.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">
+        ↑
+    </button>
+
+    <script>
+        // Fullscreen functionality for featured game
+        function toggleFullscreen() {
+            const gameFrame = document.getElementById('featuredGameFrame');
+            if (!document.fullscreenElement) {
+                gameFrame.requestFullscreen().catch(err => {
+                    console.log('Error attempting to enable fullscreen:', err);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        // Back to top functionality
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Show/hide back to top button based on scroll position
+        window.addEventListener('scroll', function() {
+            const backToTopButton = document.getElementById('backToTop');
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+    </script>
+
